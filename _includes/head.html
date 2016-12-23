@@ -1,0 +1,41 @@
+<head>
+    <meta charset="UTF-8">
+    <title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>  
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href={{ "/css/bootstrap.css" | prepend: site.baseurl }}>
+
+	<!-- Sass file with the imports to other .scss files -->
+    <link rel="stylesheet" href={{ "/css/main.css" | prepend: site.baseurl }}>
+	
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
+	
+	 <!-- Custom Style Sheet -->
+	<link rel="stylesheet" href={{ "/css/style.css" | prepend: site.baseurl }}>
+	
+	<!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href={{ "/css/owl.carousel.css" | prepend: site.baseurl }}>
+	 
+	<!-- Default Theme -->
+	<link rel="stylesheet" href={{ "/css/owl.theme.css" | prepend: site.baseurl }}>
+	
+	
+	<!-- JQuery version 2.2.2 -->
+	<script src={{ "/js/jquery.js" | prepend: site.baseurl }}></script>
+	
+	<!-- Include js plugin -->
+	<script src={{ "/js/owl.carousel.js" | prepend: site.baseurl }}></script>
+	
+	<!-- Bootstrap JS -->
+	<script src={{ "/js/bootstrap.min.js" | prepend: site.baseurl }}></script>
+	
+	<!-- Auto-Scroll JS -->
+	<!-- <script src="/js/auto_scroll.js"></script> -->
+	
+	
+
+    {% seo %}
+</head>

@@ -1,0 +1,242 @@
+---
+layout: default
+---
+<style>
+	body {
+		background: url('/assets/bg.svg');
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+</style>
+<div class="row">
+	<div class="col-lg-2 col-md-2" id="ad_column">
+			<!-- {% for post in site.posts %}
+			<div class="adbox">
+				<div class="row">
+					<i class="fa fa-hashtag fa-5x" aria-hidden="true"></i>
+				</div>
+				<div class="row">
+					<a href="">Description about ad here</a>
+				</div>
+			</div>
+			<br/>
+		   {% endfor %} -->
+
+	</div>
+
+
+	<div class="col-lg-8 col-md-8 page-container-main">
+
+		<!-- Latest Posts -->
+		<div class="row">
+			<div class="col-lg-8 col-md-12 col-sm-12">
+			
+			<div class="row">
+			
+				<div class="col-lg-4"><hr class="style-two"/></div><div class="col-lg-4"><h2 style="text-align:center;">LATEST POSTS</h2></div><div class="col-lg-4"><hr class="style-two"/></div>
+				
+				<div id="latest_posts">
+					<!-- Carousel -->
+					<div id="owl-demo" class="owl-carousel">
+					
+						{% for post in site.articles limit: 7 %}
+						<div class="item">
+						{% if post.img %}
+							<img src={{ "/assets/images-hq/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
+						{% endif %}
+							<a href="{{post.url | prepend: site.baseurl}}"><h3>{{post.title}}</h3></a>
+						</div>
+						
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			<div class="col-lg-4 col-md-12 col-sm-12">
+			<div class="row">
+			
+				<div class="col-lg-4"><hr class="style-two"/></div><div class="col-lg-4"><h2 style="text-align:center;">TOP 5</h2></div><div class="col-lg-4"><hr class="style-two"/></div>
+				
+				<div id="top_5">
+					<div id="top_5_wrapper">
+						{% for post in site.articles limit: 5 %}
+						
+							<div class="box" style="background-color:#{{post.color}}">
+								{% if post.img %}
+									<a href="{{post.url | prepend: site.baseurl}}"><img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}"></a>
+								{% endif %}
+								<div class="story_container">
+									<h4>{{post.title}}</h4>
+								</div>
+							</div>
+						
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<br/>
+		<div class="row"><hr class="style-two"/></div>
+		
+		
+		<!-- Business & Development -->
+		<div class="row" id="section">
+			<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>BUSINESS &amp DEVELOPMENT</h2></div><div class="col-lg-4"><div class="hline"></div></div>
+			<div id="story_container" class="cols">
+			
+				{% for article in site.articles %}
+					{% if article.post_cat == "business" or article.post_cat == "development" %}
+						<div class="box" style="background-color:#{{article.color}}">
+						   {% if article.img %}
+							  <img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: article.img }} alt="{{article.title}}">
+						   {% endif %}
+							  <div class="story_container">
+								<h4>{{article.title}}</h4>
+								<p>{{article.description}}</p>
+								 <div class="action">{{ article.date | date: '%B %d, %Y' }}<a href="{{article.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
+							</div>   
+						</div>
+					{% endif %}
+				{% endfor %}
+				
+			</div>
+		</div>
+		
+		
+		<div class="row"><hr class="style-two"/></div>
+		
+		
+		<!-- LIFESTYLE, BEAUTY & FASHION -->
+		<div class="row" id="section">
+			<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>LIFESTYLE, BEAUTY &amp FASHION</h2></div><div class="col-lg-4"><div class="hline"></div></div>
+			<div id="story_container" class="cols">
+			
+				{% for article in site.articles %}
+					{% if article.post_cat == "lifestyle" or article.post_cat == "beauty" or article.post_cat == "fashion"%}
+						<div class="box" style="background-color:#{{article.color}}">
+						   {% if article.img %}
+							  <img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: article.img }} alt="{{article.title}}">
+						   {% endif %}
+							  <div class="story_container">
+								<h4>{{article.title}}</h4>
+								<p>{{article.description}}</p>
+								 <div class="action">{{ article.date | date: '%B %d, %Y' }}<a href="{{article.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
+							</div>   
+						</div>
+					{% endif %}
+				{% endfor %}
+			   
+			</div>
+		</div>
+		
+		
+		<div class="row"><hr class="style-two"/></div>
+		
+		
+		<!-- LOVE, FAMILY & LIFE -->
+		<div class="row" id="section">
+			<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>LOVE, FAMILY &amp LIFE</h2></div><div class="col-lg-4"><div class="hline"></div></div>
+			<div id="story_container" class="cols">
+			
+				{% for article in site.articles %}
+					{% if article.post_cat == "love" or article.post_cat == "family" or article.post_cat == "life" %}
+						<div class="box" style="background-color:#{{article.color}}">
+						   {% if article.img %}
+							  <img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: article.img }} alt="{{article.title}}">
+						   {% endif %}
+							  <div class="story_container">
+								<h4>{{article.title}}</h4>
+								<p>{{article.description}}</p>
+								 <div class="action">{{ article.date | date: '%B %d, %Y' }}<a href="{{article.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
+							</div>   
+						</div>
+					{% endif %}
+				{% endfor %}
+			   
+			</div>
+		</div>
+		
+		
+		<div class="row"><hr class="style-two"/></div>
+		
+		
+		<!-- EXTRA READS -->
+		<div class="row" id="section">
+			<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>XTRA READS</h2></div><div class="col-lg-4"><div class="hline"></div></div>
+			<div id="story_container" class="cols">
+			
+				{% for article in site.articles %}
+					{% if article.post_cat == "extra" %}
+						<div class="box" style="background-color:#{{article.color}}">
+						   {% if article.img %}
+							  <img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: article.img }} alt="{{article.title}}">
+						   {% endif %}
+							  <div class="story_container">
+								<h4>{{article.title}}</h4>
+								<p>{{article.description}}</p>
+								 <div class="action">{{ article.date | date: '%B %d, %Y' }}<a href="{{article.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
+							</div>   
+						</div>
+					{% endif %}
+				{% endfor %}
+			   
+			</div>
+		</div>
+		
+		<br/><br/>
+	</div>
+
+
+	<div class="col-lg-2 col-md-2" id="ad_column">
+			<!-- {% for post in site.posts %}
+			<div class="adbox">
+				<div class="row">
+					<i class="fa fa-hashtag fa-5x" aria-hidden="true"></i>
+				</div>
+				<div class="row">
+					<a href="">Description about ad here</a>
+				</div>
+			</div>
+			<br/>
+		   {% endfor %} -->
+
+	</div>
+
+</div>
+
+<div class="row" id="editors_blog">
+	<div class="container">
+	
+		<div class="row">
+			<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>EDITOR'S BLOG</h2></div><div class="col-lg-4"><div class="hline"></div></div>
+		</div>
+		
+		<div class="row" id="eb_content">
+		{% include editors_blog.html %}
+		</div>
+	</div>
+
+</div>
+
+
+<script>
+	$(document).ready(function() {
+ 
+		$("#owl-demo").owlCarousel({
+			navigation : true,
+			slideSpeed : 300,
+			paginationSpeed : 400,
+			singleItem:true,
+			autoPlay: 3000,
+		});
+
+	});
+</script>

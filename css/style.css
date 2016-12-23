@@ -1,0 +1,269 @@
+html, body {
+	height: 100%;
+	position: relative;
+	/* background: url('/assets/bg.svg') center 160px repeat-x; */
+}
+
+/*************************************************************************************************
+* The Navbar
+*************************************************************************************************/
+.navbar-inverse {
+    background-color: #2c3134;
+    /* border-color: #080808; */
+}
+.navbar-brand {
+	margin-bottom: 0.5em; 
+}
+
+.navbar-right {
+	margin-right: 10px;
+	margin-top: 0.5em;
+}
+
+.navbar-brand:hover {
+	cursor: pointer;
+}
+
+
+/*************************************************************************************************
+* Ad Space
+*************************************************************************************************/
+#ad_column {
+	text-align: center;
+}
+
+.adbox {
+	height: auto;
+	width: auto;
+	padding: 15px;
+	margin: 15px;
+	border: box;
+}
+
+
+/*************************************************************************************************
+* Owl Carousel CSS
+*************************************************************************************************/
+#owl-demo .item img{
+    display: block;
+    margin: auto;
+}
+
+.item h3 {
+	text-align: center;
+}
+
+
+/*************************************************************************************************
+* Landing Home Page
+*************************************************************************************************/
+
+#top_5 {
+	text-align: center;
+	margin: auto;
+	height: 608px;
+	width: 250px;
+	max-width: 300px;
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+#top_5 .box {
+	width: 250px;
+	height: auto;
+}
+
+#top_5 img {
+	height: 280px;
+	width: auto;
+}
+
+#top_5_wrapper {
+	-webkit-animation: autoscroll 50s linear infinite;
+}
+#top_5_wrapper:hover {
+	-webkit-animation-play-state:paused;
+}
+
+hr.style-one {
+	border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+hr.style-two {
+	/* Flaired edges, by Tomas Theunissen */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-two:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+#editors_blog {
+	text-align: justify;
+	padding: 15px;
+	background-image: url('/assets/editors_blog_bg.jpg');
+}
+
+#editors_blog .container {
+	/*============================================*/
+	background: rgba(255, 255, 255, 0.80);
+	border-radius: 3px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	/*============================================*/
+}
+
+#editors_blog p,i {
+	display: inline;
+}
+
+#eb_content {
+	width: 100%;
+	margin: 0;
+	padding: 40px;
+}
+/*************************************************************************************************
+* The Extras
+*************************************************************************************************/
+h2 {
+	text-align: center;
+}
+/* Horizontal Lines */
+.hline {
+	border-bottom: 2px solid #384452;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.hline-w {
+	border-bottom: 2px solid #ffffff;
+	margin-bottom: 25px;
+}
+
+/* Navbar */
+.navbar {
+	color:#ffffff;
+}
+
+/* Header */
+#headerwrap {
+	background-color: #2c3134;
+	color:white;
+	/* background-image: url('../assets/img/star_background.jpg'); */
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+	min-height: 100%;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+#headerwrap .img-responsive {
+	margin: 0 auto;
+}
+
+#headerwrap h1 {
+	font-family: XTreem;
+	margin-bottom: 10%;
+}
+
+
+/* Footer */
+#footerwrap {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background: #2c3134;
+}
+
+#footerwrap p {
+	color: #bfc9d3;
+}
+
+#footerwrap h4,h6 {
+	color: #ffffff;
+}
+
+#footerwrap h6 {
+	margin-top:40px;
+}
+
+#footerwrap i:hover {
+	color: orange;
+	-webkit-animation: bounce 2s;
+}
+
+.popover {
+    background: #384452;
+	color: #ffffff;
+}
+
+/* Fonts */
+@font-face {
+	font-family: XTreem;  
+	src: local('XtreemMedium_Demo'), 
+		url("../fonts/XtreemMedium_Demo.ttf") format('truetype');  
+	font-weight: normal;  
+}
+
+
+
+/*************************************************************************************************
+* The Animations
+*************************************************************************************************/
+.arrow_bounce {
+	cursor: pointer;
+	width: 60px;
+	left: 50%;
+	margin-left: -30px;
+	position: absolute;
+	bottom: 0;
+	animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	-moz-animation: bounce 2s infinite;
+	-o-animation: bounce 2s infinite;
+}
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+}
+ 
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+    40% {-moz-transform: translateY(-30px);}
+    60% {-moz-transform: translateY(-15px);}
+}
+ 
+@-o-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+    40% {-o-transform: translateY(-30px);}
+    60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+
+@keyframes autoscroll {
+  from { 
+    transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate3d(0,-90%,0);
+  }
+}

@@ -1,0 +1,117 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+<header>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  {% include menu-links.html %}
+</div>
+
+<!-- Use any element to open the sidenav -->
+<!-- <span id="slid" onclick="openNav()"><i class="fa fa-align-left" aria-hidden="true"></i></span>
+<a href="{{site.baseurl}}/"><h1 class="header-title">{{site.title}}<i class="fa fa-sun-o" aria-hidden="true"></i> </h1></a>
+<h2 class="header-tagline">Son of the Sun</h2> -->
+
+	<!-- NAVBAR IN ALL ITS GLORY -->
+	<div class="container">
+	
+		<nav class="navbar navbar-trans navbar-inverse navbar-fixed-top" id="top-nav" role="navigation">
+			<div class="navbar-header">
+				<a class="navbar-brand" onclick="openNav()">
+					<!-- <img src="/assets/favicon.ico"></img> -->
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</a>
+				<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-awesome-navbar">
+					<span class="sr-only">Toggle Navigation</span>
+					<i class="fa fa-bars"></i>
+				</button> -->
+			</div> <!-- End Of NavBar Header Definition -->
+		
+			
+		
+			<div class="collapse navbar-collapse navbar-right" id="my-awesome-navbar">
+				<ul class="nav navbar-nav" id="myNav">
+					<li class=""><a href="#">HOME</a></li>
+					<li class=""><a href="#" data-toggle="collapse" data-target="#collapseCategories" aria-expanded="false" aria-controls="collapseCategories">ARTICLES</a>
+						<div class="collapse" id="collapseCategories">
+							<div class="well">
+								<p><a href="#">BUSINESS</a></p>
+								<p><a href="#">LIFESTYLE</a></p>
+								<p><a href="#">DEVELOPMENT</a></p>
+								<p><a href="#">BEAUTY &amp FASHION</a></p>
+								<p><a href="#">RELATIONSHIPS</a></p>
+								<p><a href="#">XTRA READS</a></p>
+							</div>
+						</div>
+					</li>
+					<!-- <li class=""><a href="#">ABOUT</a></li>
+					<li class=""><a href="#">CONTACT US</a></li> -->
+					
+				</ul>
+			</div> <!-- End Of Adding NavBar Content -->
+
+		</nav> <!-- End Of NavBar, Indefinitely -->
+		
+	</div> <!-- End Of Fluid Container -->
+	<!-- /NAVBAR IN ALL ITS GLORY -->
+	
+	
+	<!-- HEADERWRAP CONTENT -->
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 himg">
+					<a href="{{site.baseurl}}/"><img src={{ "/assets/logo.jpg" | prepend: site.baseurl }} class="img-responsive"> </h1></a>
+				</div>
+			</div>
+			
+			<div class="row">
+				<!-- Proceed down button -->
+				<!-- <div class="arrow_bounce">
+					<i class="fa fa-angle-double-down fa-5x" id="mouseDownButton" onclick="scrollDown()"></i>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<!-- /HEADERWRAP CONTENT -->
+
+
+</header>
+
+<div>
+
+
+
+
+{{content}}
+
+
+
+{% include footer.html %}
+
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";    
+}
+function scrollDown() {
+	var mdb = document.getElementById('mouseDownButton');
+	mdb.addEventListener('click', e => {
+		$('html,body').animate({
+		scrollTop: $("#page_content").offset().top - 50},
+		800);
+	});
+}
+</script>
+{% include analytics.html %}
+</body>
+</html>
