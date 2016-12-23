@@ -12,29 +12,29 @@ post_cat: "extra"
 color: 924887
 author: Phodiso Modirwa
 ---
-_I emptied my backpack of all the costumes of the characters I sometimes play 
+_I emptied my backpack of all the costumes of the characters I sometimes play_
 
-This is on days being myself proves a little too costly
+_This is on days being myself proves a little too costly_
 
-I lost my make-up kit somewhere between really growing tired of pretense
+_I lost my make-up kit somewhere between really growing tired of pretense_
 
-and a craving for the feel of my own skin
+_and a craving for the feel of my own skin_
 
-I can’t say I loved it there
+_I can’t say I loved it there_
 
-I just liked seeing how different people can treat the same person posing a thousand others
+_I just liked seeing how different people can treat the same person posing a thousand others_
 
-Someone should have told me, you cannot be you and a thousand others
+_Someone should have told me, you cannot be you and a thousand others_
 
-You’re going to lose your voice to a thousand others
+_You’re going to lose your voice to a thousand others_
 
-We’re going to get tired of your thousand others
+_We’re going to get tired of your thousand others_
 
-And eventually you’re gonna be a ghost among your thousand others who drew strength and life from you
+_And eventually you’re gonna be a ghost among your thousand others who drew strength and life from you_
 
-Be you because everyone else is taken
+_Be you because everyone else is taken_
 
-And your thousand others, really don’t exist_
+_And your thousand others, really don’t exist_
 
 We have names and cultures we belong to that speak of who we are and where we are from. But the passing of years sometimes sees us gravitating towards certain norms and cultures different from our own and may even possibly change our names. We do this and say we are adapting to the diversity and dynamic nature of culture. Truth is most times we are consumed by a desire to belong in places we find ourselves and with the people among whom we find ourselves.
 

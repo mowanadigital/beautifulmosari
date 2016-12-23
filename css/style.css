@@ -111,12 +111,6 @@ hr.style-two:before { /* Not really supposed to work, but does */
     border-radius: 20px;
 }
 
-#editors_blog {
-	text-align: justify;
-	padding: 15px;
-	background-image: url('/assets/editors_blog_bg.jpg');
-}
-
 #editors_blog .container {
 	/*============================================*/
 	background: rgba(255, 255, 255, 0.80);
