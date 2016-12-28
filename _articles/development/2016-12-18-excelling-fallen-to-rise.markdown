@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Excellence... fallen to rise!"
-description: The challenges of being a woman always seem to be an exaggeration, even to us women. A woman, a mother, an aunt, a sister, a counsellor, a confidante, a pillow and a “sponge”! Yet, bearing all these badges of honour, the beautiful souls are expected to be strong,
+description: The challenges of being a woman always seem to be an exaggeration, even to us women. A woman, a mother, an aunt, a sister, a counsellor, a confidante, a pillow and a “sponge”!...
 date:   2016-12-18
 categories: jekyll update
 img: development_Basket_Weavers.jpg

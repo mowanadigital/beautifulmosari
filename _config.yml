@@ -9,8 +9,7 @@ baseurl: ""
 
 
 sass:
-    style: compressed
-
+  style: compressed
   
 #optimization
 #compress.html
@@ -25,7 +24,6 @@ compress_html:
   startings: []
 
 highlight: rouge
-
 
 # Tracker
 analytics: UA-83979019-1

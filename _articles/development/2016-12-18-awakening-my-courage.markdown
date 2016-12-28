@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Awakening My Courage"
-description: Emotional stress and frustration can often cause you to express things you don’t mean to those you care about the most.  I have been somewhat feeling powerless and unable to motivate myself to do the necessary things in life.
+description: Emotional stress and frustration can often cause you to express things you don’t mean to those you care about the most...
 date:   2016-12-18
 categories: jekyll update
 img: development_Happy_Kesego.jpg

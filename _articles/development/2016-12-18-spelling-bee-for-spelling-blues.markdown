@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spelling Bee for Spelling Blues"
-description: Social entrepreneurs are change agents in the society. They are individuals with innovative solutions to society’s most pressing issues. Their ability to develop a vision that draws others distinguishes them from many and their creativity, commitment and diligence enable them to inspire confidence in others social problems.
+description: Social entrepreneurs are change agents in the society. They are individuals with innovative solutions to society’s most pressing issues...
 date:   2016-12-18
 categories: jekyll update
 img: development_Tshepang_Thibedi.jpg

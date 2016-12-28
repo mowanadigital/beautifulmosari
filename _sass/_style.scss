@@ -1,9 +1,81 @@
 #story_container {
     width: 95%;
-    margin: 4em auto;
+    margin: 2em auto;
     height: auto;
+	position: relative;
 }
-.cols {
+
+/*************************************************************************************************
+* The Masonry
+*************************************************************************************************/
+.grid {
+
+	-moz-column-count: 4;
+    -moz-column-gap: 2%;
+    -moz-column-width: 25%;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 2%;
+    -webkit-column-width: 25%;
+    column-count: 5;
+    column-gap: 2%;
+    column-width: 20%;
+	float: inherit;
+
+	@include media-query($on-large){
+	-moz-column-count: 4;
+    -moz-column-gap: 2%;
+    -moz-column-width: 25%;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 2%;
+    -webkit-column-width: 25%;
+    column-count: 4;
+    column-gap: 2%;
+    column-width: 25%;
+	float: inherit;
+	}
+	
+	@include media-query($on-laptop){
+    -moz-column-count: 3;
+    -moz-column-gap: 3%;
+    -moz-column-width: 30%;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 3%;
+    -webkit-column-width: 30%;
+    column-count: 3;
+    column-gap: 3%;
+    column-width: 33%;
+	float: inherit;	
+    }
+    @include media-query($on-palm) {
+    -moz-column-count: 1;
+    -moz-column-gap: 0%;
+    -moz-column-width: 100%;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 0%;
+    -webkit-column-width: 100%;
+    column-count: 1;
+    column-gap: 0%;
+    column-width: 100%;
+	float: inherit
+    }
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: inline-block;
+  clear: both;
+}
+
+.grid-item {
+	float: left;
+}
+
+
+/*************************************************************************************************
+* The Cols
+*************************************************************************************************/
+/*.cols {
     -moz-column-count: 4;
     -moz-column-gap: 2%;
     -moz-column-width: 25%;
@@ -36,8 +108,9 @@
     column-gap: 0%;
     column-width: 100%;
     }
+}*/
 
-}
+
 .box {
     margin-bottom: 20px;
     display: inline-block;
@@ -62,7 +135,7 @@
 
 
 .story_container {
-         padding: 15px;     
+         padding: 15px;
 
      }
      
@@ -112,12 +185,17 @@
     margin: 0 auto;
     box-shadow: 0 0 1px #aaa;
 	max-width: auto;
+	padding: 15px;
 	
 	/*============================================*/
 	background: rgba(255, 255, 255, 0.80);
 	border-radius: 3px;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 	/*============================================*/
+	
+	@include media-query($on-palm) {
+		padding:0;
+	}
 
 }
 .page-container-post {
@@ -283,7 +361,9 @@ table {
 
 // Featured image in posts
 .featured-img {
-    width: 100%;
+    width: auto;
+	display: block;
+    margin: auto;
 }
 
 // Active page number in pagination

@@ -57,20 +57,18 @@ html, body {
 /*************************************************************************************************
 * Landing Home Page
 *************************************************************************************************/
-
 #top_5 {
 	text-align: center;
 	margin: auto;
-	height: 608px;
-	width: 250px;
+	height: 710px;
+	width: 100%;
 	max-width: 300px;
-	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
 	overflow-y: hidden;
 	overflow-x: hidden;
 }
 
 #top_5 .box {
-	width: 250px;
+	width: 100%;
 	height: auto;
 }
 
@@ -213,6 +211,36 @@ h2 {
 	font-weight: normal;  
 }
 
+
+
+
+/* .grid-item {
+	width: 23.4;
+	height: 100%;
+	float: left;
+	margin: 10px;
+}
+@media (min-width: 600) {
+	.grid-item { 
+		width: 100%;
+		margin: auto;
+	}
+}
+@media (min-width: 768px) {
+	.grid-item { 
+		width: 30%;
+	}
+}
+@media (min-width: 1000px) {
+	.grid-item { 
+		width: 30%;
+	}
+}
+@media (min-width: 1600px) {
+	.grid-item { 
+		width: 22.9%;
+	}
+} */
 
 
 /*************************************************************************************************

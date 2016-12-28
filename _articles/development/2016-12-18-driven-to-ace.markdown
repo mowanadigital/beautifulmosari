@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Driven To Ace"
-description: When I first realized that there were limited opportunities in Botswana for my area of interest, I decided to use my tennis talent to pursue my studies in the United States of America. I have been playing tennis for 14 years now and having been at number 1 in Botswana for a few years, I was good enough for an American university.
+description: When I first realized that there were limited opportunities in Botswana for my area of interest, I decided to use my tennis talent to pursue my studies in the United States of America.
 date:   2016-12-18
 categories: jekyll update
 img: development_Gordon_C_Jones.jpg

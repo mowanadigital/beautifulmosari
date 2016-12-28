@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Sky Is The Limit"
-description: In the past, certain fields were a no go area for women. Over time we have seen this change. Today we see women step up, challenge the norm and break some of these societal barriers to show that just like their male counterparts, they are able and also have what it takes to excel in male dominated fields.
+description: In the past, certain fields were a no go area for women. Over time we have seen this change. Today we see women step up, challenge the norm and break some of these societal barriers...
 date:   2016-12-18
 categories: jekyll update
 img: development_Kgomotso_Phatsima.jpg

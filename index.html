@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+<!-- Masonry -->
+<script src={{ "/js/masonry.pkgd.min.js" | prepend: site.baseurl }}></script>
+<!-- <link rel="stylesheet" href={{ "/css/masonry-docs.css" | prepend: site.baseurl }}> -->
+
 <style>
 	body {
 		background: url('{{site.baseurl}}/assets/bg.svg');
@@ -27,73 +31,76 @@ layout: default
 	</div>
 
 
-	<div class="col-lg-8 col-md-8 page-container-main">
+	<div class="col-lg-8 col-md-8">
 
 		<!-- Latest Posts -->
 		<div class="row">
+		
+			<!-- LATEST PSOTS -->
 			<div class="col-lg-8 col-md-12 col-sm-12">
 			
-			<div class="row">
-			
-				<div class="col-lg-4"><hr class="style-two"/></div><div class="col-lg-4"><h2 style="text-align:center;">LATEST POSTS</h2></div><div class="col-lg-4"><hr class="style-two"/></div>
+				<div class="row page-container-main">
 				
-				<div id="latest_posts">
-					<!-- Carousel -->
-					<div id="owl-demo" class="owl-carousel">
+					<div class="col-lg-4"><hr class="style-two"/></div><div class="col-lg-4"><h2 style="text-align:center;">LATEST POSTS</h2></div><div class="col-lg-4"><hr class="style-two"/></div>
 					
-						{% for post in site.articles limit: 7 %}
-						<div class="item">
-						{% if post.img %}
-							<img src={{ "/assets/images-hq/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
-						{% endif %}
-							<a href="{{post.url | prepend: site.baseurl}}"><h3>{{post.title}}</h3></a>
-						</div>
+					<div id="latest_posts">
+						<!-- Carousel -->
+						<div id="owl-demo" class="owl-carousel">
 						
-						{% endfor %}
-					</div>
-				</div>
-			</div>
-			</div>
-				
-				
-				
-				
-			<div class="col-lg-4 col-md-12 col-sm-12">
-			<div class="row">
-			
-				<div class="col-lg-4"><hr class="style-two"/></div><div class="col-lg-4"><h2 style="text-align:center;">TOP 5</h2></div><div class="col-lg-4"><hr class="style-two"/></div>
-				
-				<div id="top_5">
-					<div id="top_5_wrapper">
-						{% for post in site.articles limit: 5 %}
-						
-							<div class="box" style="background-color:#{{post.color}}">
-								{% if post.img %}
-									<a href="{{post.url | prepend: site.baseurl}}"><img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}"></a>
-								{% endif %}
-								<div class="story_container">
-									<h4>{{post.title}}</h4>
-								</div>
+							{% for post in site.articles limit: 7 %}
+							<div class="item">
+							{% if post.img %}
+								<img src={{ "/assets/images-hq/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
+							{% endif %}
+								<a href="{{post.url | prepend: site.baseurl}}"><h3>{{post.title}}</h3></a>
 							</div>
-						
-						{% endfor %}
+							
+							{% endfor %}
+						</div>
 					</div>
 				</div>
 			</div>
+				
+			
+			<!-- TOP 5 -->
+			<div class="col-lg-4 col-md-12 col-sm-12">
+				<div class="row page-container-main">
+				
+					<div class="col-lg-4"><hr class="style-two"/></div><div class="col-lg-4"><h2 style="text-align:center;">TOP 5</h2></div><div class="col-lg-4"><hr class="style-two"/></div>
+					
+					<div id="top_5">
+						<div id="top_5_wrapper">
+							{% for post in site.articles limit: 5 %}
+							
+								<div class="box" style="background-color:#{{post.color}}">
+									{% if post.img %}
+										<a href="{{post.url | prepend: site.baseurl}}"><img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}"></a>
+									{% endif %}
+									<div class="story_container">
+										<h4>{{post.title}}</h4>
+									</div>
+								</div>
+							
+							{% endfor %}
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		
 		<br/>
-		<div class="row"><hr class="style-two"/></div>
 		
-		
+		<!-- STORIES -->
 		<!-- Business & Development -->
-		<div class="row" id="section">
-			<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>BUSINESS &amp DEVELOPMENT</h2></div><div class="col-lg-4"><div class="hline"></div></div>
-			<div id="story_container" class="cols">
+		<div class="row page-container-main" id="section">
+			<div class="row">
+				<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>BUSINESS &amp DEVELOPMENT</h2></div><div class="col-lg-4"><div class="hline"></div></div>
+			</div>
+			<div id="story_container" class="grid">
 			
 				{% for article in site.articles %}
 					{% if article.post_cat == "business" or article.post_cat == "development" %}
+					<div class="grid-item">
 						<div class="box" style="background-color:#{{article.color}}">
 						   {% if article.img %}
 							  <img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: article.img }} alt="{{article.title}}">
@@ -102,8 +109,9 @@ layout: default
 								<h4>{{article.title}}</h4>
 								<p>{{article.description}}</p>
 								 <div class="action">{{ article.date | date: '%B %d, %Y' }}<a href="{{article.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
-							</div>   
+							  </div>   
 						</div>
+					</div>
 					{% endif %}
 				{% endfor %}
 				
@@ -111,16 +119,19 @@ layout: default
 		</div>
 		
 		
-		<div class="row"><hr class="style-two"/></div>
+		<div class="row"><br/></div>
 		
 		
 		<!-- LIFESTYLE, BEAUTY & FASHION -->
-		<div class="row" id="section">
-			<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>LIFESTYLE, BEAUTY &amp FASHION</h2></div><div class="col-lg-4"><div class="hline"></div></div>
-			<div id="story_container" class="cols">
+		<div class="row page-container-main" id="section">
+			<div class="row">
+				<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>LIFESTYLE, BEAUTY &amp FASHION</h2></div><div class="col-lg-4"><div class="hline"></div></div>
+			</div>
+			<div id="story_container" class="grid">
 			
 				{% for article in site.articles %}
-					{% if article.post_cat == "lifestyle" or article.post_cat == "beauty" or article.post_cat == "fashion"%}
+					{% if article.post_cat == "lifestyle" or article.post_cat == "beauty" or article.post_cat == "fashion" %}
+					<div class="grid-item">
 						<div class="box" style="background-color:#{{article.color}}">
 						   {% if article.img %}
 							  <img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: article.img }} alt="{{article.title}}">
@@ -131,6 +142,7 @@ layout: default
 								 <div class="action">{{ article.date | date: '%B %d, %Y' }}<a href="{{article.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
 							</div>   
 						</div>
+					</div>
 					{% endif %}
 				{% endfor %}
 			   
@@ -138,16 +150,19 @@ layout: default
 		</div>
 		
 		
-		<div class="row"><hr class="style-two"/></div>
+		<div class="row"><br/></div>
 		
 		
 		<!-- LOVE, FAMILY & LIFE -->
-		<div class="row" id="section">
-			<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>LOVE, FAMILY &amp LIFE</h2></div><div class="col-lg-4"><div class="hline"></div></div>
-			<div id="story_container" class="cols">
+		<div class="row page-container-main" id="section">
+			<div class="row">
+				<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>LOVE, FAMILY &amp LIFE</h2></div><div class="col-lg-4"><div class="hline"></div></div>
+			</div>
+			<div id="story_container" class="grid">
 			
 				{% for article in site.articles %}
 					{% if article.post_cat == "love" or article.post_cat == "family" or article.post_cat == "life" %}
+					<div class="grid-item">
 						<div class="box" style="background-color:#{{article.color}}">
 						   {% if article.img %}
 							  <img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: article.img }} alt="{{article.title}}">
@@ -158,6 +173,7 @@ layout: default
 								 <div class="action">{{ article.date | date: '%B %d, %Y' }}<a href="{{article.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
 							</div>   
 						</div>
+					</div>
 					{% endif %}
 				{% endfor %}
 			   
@@ -165,16 +181,19 @@ layout: default
 		</div>
 		
 		
-		<div class="row"><hr class="style-two"/></div>
+		<div class="row"><br/></div>
 		
 		
 		<!-- EXTRA READS -->
-		<div class="row" id="section">
-			<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>XTRA READS</h2></div><div class="col-lg-4"><div class="hline"></div></div>
-			<div id="story_container" class="cols">
+		<div class="row page-container-main" id="section">
+			<div class="row">
+				<div class="col-lg-4"><div class="hline"></div></div><div class="col-lg-4"><h2>XTRA READS</h2></div><div class="col-lg-4"><div class="hline"></div></div>
+			</div>
+			<div id="story_container" class="grid">
 			
 				{% for article in site.articles %}
 					{% if article.post_cat == "extra" %}
+					<div class="grid-item">
 						<div class="box" style="background-color:#{{article.color}}">
 						   {% if article.img %}
 							  <img class="feat-image" src={{ "/assets/images/" | prepend: site.baseurl | append: article.img }} alt="{{article.title}}">
@@ -185,6 +204,7 @@ layout: default
 								 <div class="action">{{ article.date | date: '%B %d, %Y' }}<a href="{{article.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
 							</div>   
 						</div>
+					</div>
 					{% endif %}
 				{% endfor %}
 			   
@@ -192,6 +212,7 @@ layout: default
 		</div>
 		
 		<br/><br/>
+		
 	</div>
 
 
@@ -239,4 +260,5 @@ layout: default
 		});
 
 	});
+
 </script>

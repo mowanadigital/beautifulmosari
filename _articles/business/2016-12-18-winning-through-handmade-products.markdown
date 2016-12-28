@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Winning Through Handmade Organic Products"
-description: Family skin problems motivated this budding entrepreneur to explore organic beauty products, and the results have been amazing! Ms Portia Sthabiso Mokgathong, director of LaedyP Organics, talks to Beautiful Mosari about her business.
+description: Family skin problems motivated this budding entrepreneur to explore organic beauty products, and the results have been amazing!
 date:   2016-12-18
 categories: jekyll update
 img: business_Portia_Sthabiso_Mokgathong.jpg
